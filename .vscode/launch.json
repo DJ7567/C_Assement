@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/158207/OneDrive - Arrow Electronics, Inc/Desktop/New_assement/C_Assement",
-      "program": "c:/Users/158207/OneDrive - Arrow Electronics, Inc/Desktop/New_assement/C_Assement/build/Debug/outDebug",
+      "cwd": "c:/Users/158207/OneDrive - Arrow Electronics, Inc/Desktop/C_programs/C_Assement",
+      "program": "c:/Users/158207/OneDrive - Arrow Electronics, Inc/Desktop/C_programs/C_Assement/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
