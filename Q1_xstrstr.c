@@ -10,7 +10,7 @@ char* xstrstr(char *string1, char *string2)
     if( length1 < length2 )
     {
        printf("-------------------------------------------------------------");
-       printf("\n\nSorry program terminated \n");
+       printf("\n\n Sorry program terminated \n");
        printf("The Entered sub string is larger than  main String \n\n\n");
        printf("-------------------------------------------------------------");
        exit(1);
@@ -24,22 +24,19 @@ char* xstrstr(char *string1, char *string2)
 
             for(int j=0; j<length2; j++)
             {
+
                if(string1[index]==string2[j])
                 {
-
                       if(j==(length2- 1))
                       {
                           string1 = string1 + i;  
                           return string1;
                       }
-
                 }
-
                 else
                 {
                     break;
                 }
-
                 index++;
 
             }
@@ -59,28 +56,30 @@ int main()
 
     char *starting;                              //Pointer S which will the starting pointer of the array.//
 
-    printf("Enter the Main String( MAX size is 100 ) : \n");
+    printf("Enter the Main String( MAX size is 100 ): \n");
     gets(main_string);                           //Taking input from string 1//  
 
-    printf("Enter the sub string (Smaller than main):\n");
+    printf("Enter the sub string (Smaller than main): \n");
     gets(sub_string);                            //Taking input from string 2//
                                                  
     starting=xstrstr(main_string,sub_string);    //calling the function xstrstr//
    
-    printf("______________________________________________________________________________________\n\n");
-    printf("                                       OUTPUT                                           \n");
-    printf("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n");
+    printf("______________________________________________________________________________________\n");
+    printf("|                                      OUTPUT                                         |\n");
+    printf("|+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|\n");
+
 
     if(starting==NULL)
     {
-         printf("The Second string entered is not a sub-string  \n");
+      printf("The Second string entered is not a sub-string  \n");
     }
     else
     {
-         printf("The address of First letter of sub string is %d and the letter is %c \n",starting,*starting);
+      printf("The address of First letter of sub string is %d and the letter is %c \n",starting,*starting);
     }
-    printf("______________________________________________________________________________________\n\n");
 
+
+    printf("______________________________________________________________________________________\n\n");
     return 0;
 
 }
