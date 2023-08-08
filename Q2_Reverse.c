@@ -9,18 +9,31 @@ void reverse(char *string, char *ptr)
     Length = strlen(ptr);           //taking length of the string.
     count = Length;                 //Assiging the downcounter value equal to the length of the string.
 
-    
+    string[count] = '\0';
     // loop for storing the reverse of the into a charater array.
+
     for(int index=0; index<Length; index++)
     {
                                     //hello will be converted into olleh
-        count--;                    // decrement count example 4 3 2 1 0
-        string[count]=ptr[index];   // values  (count , index) (4,0) (3,1) (2,2) (1,3) (0,4)   
+        count--;                    //decrement count example 4 3 2 1 0
+        string[count]=ptr[index];   //values  (count , index) (4,0) (3,1) (2,2) (1,3) (0,4)   
                                           
     }
 
-    printf(" %s \n", string);       // printing the string   
-    
+    printf(" %s \n", string);       //printing the string   
+}
+
+
+//Printing the array of the strings 
+void print_char_array(char **array)
+{
+   printf("\n Printing the original Strings \n\n"); // printing the string  
+
+   for(int count=0;count<3;count++)
+   {
+        printf(" %s \n", *array);                   // printing thr string one by one 
+        array++;                                    // increamenting the pointer 
+   }
 }
 
 void main()
@@ -32,11 +45,13 @@ void main()
     // 2D array to store the variable.
     char Store[3][100] ,*ptr;
 
-    printf("\n\n Output after reversing the string: \n\n"); 
-    for(int i=0 ; i<3 ;i++)
+    print_char_array(array_string);                       // printing the array
+
+    printf("\n Output after reversing the string: \n\n"); 
+    for(int index=0 ; index<3 ;index++)
     { 
-        reverse(Store[i],array_string[i]);  // reversing the string
+        reverse(Store[index],array_string[index]);        // reversing the string
     }
 
-    printf("\n");
+    printf("\n"); 
 }
